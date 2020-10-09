@@ -35,7 +35,7 @@ const Dashboard: React.FC = () => {
   const [hideResults, setHideResults] = useState(false);
 
   async function fetchSuggestions(term: string) {
-    if (term && term.length > 3) {
+    if (term && term.length > 2) {
       const response = await api.get('buscaautocomplete', {
         params: {
           productNameContains: term,
@@ -52,7 +52,7 @@ const Dashboard: React.FC = () => {
 
   async function fetchItems(term: string) {
     setHideResults(true);
-    if (term && term.length > 3) {
+    if (term && term.length > 2) {
       const response = await api.get('api/catalog_system/pub/products/search', {
         params: {
           ft: term,
