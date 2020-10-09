@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import {
   Text, TouchableOpacity, FlatList,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useItems } from '../../hooks/items';
-import SearchItem, { IItemsData } from '../../components/SearchItem';
+import SearchItem from '../../components/SearchItem';
 
 import {
   Container,
@@ -25,7 +25,7 @@ interface ISuggestionData {
 
 const Dashboard: React.FC = () => {
   const {
-    items, setNewItems, paginatedItems, offset, page,
+    items, setNewItems, paginatedItems, offset,
   } = useItems();
 
   const flatListRef = useRef<FlatList>(null);

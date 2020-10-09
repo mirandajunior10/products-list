@@ -18,7 +18,7 @@ interface ItemsContextData {
 const ItemsContext = createContext<ItemsContextData>({} as ItemsContextData);
 
 const ItemsProvider: React.FC = ({ children }) => {
-  const offset = 6;
+  const offset = 12;
   const [items, setItems] = useState<IItemsData[]>([] as IItemsData[]);
   const [paginatedItems, setPaginatedItems] = useState<IItemsData[]>([] as IItemsData[]);
   const [page, setPage] = useState(1);

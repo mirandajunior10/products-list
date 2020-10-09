@@ -10,7 +10,7 @@ import {
 
 interface PaginationProps{
   pages: number
-  flatListRef: React.RefObject<FlatList<any>>
+  flatListRef: React.RefObject<FlatList<unknown>>
 }
 
 const Pagination: React.FC<PaginationProps> = ({ pages, flatListRef }) => {
